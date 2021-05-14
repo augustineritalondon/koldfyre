@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>koldfyre</title>
+</head>
+<body>
+
+    <div id="register">
+        <h1 class="title">kold<span>fyre</span></h1>
+        <div class="bg-c">
+            <form id="theForm" action="home.html" method="post" onsubmit=" return validateTextbox()">
+                <div class="row form-s">
+                    <input type="text" id="firstname" placeholder="First Name" required>
+                </div>
+                <div class="row form-s">
+                    <input type="text" id="lastname" placeholder="Last Name" required>
+                </div>
+                <div class="row form-s">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="row form-s">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="row form-s">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="radio-b">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male"> Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female"> Female</label>
+                </div>
+                
+                <input type="submit" value="register" class="button">
+                <p>I know the gist already! <a href="login.html"> Login </a></p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
