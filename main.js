@@ -55,11 +55,11 @@ function saveToLocalStorage() {
     //localStorage.setItem("name", firstName.value)
     //console.log(localStorage);
    localStorage.setItem("details", JSON.stringify(details));
-   console.log(localStorage);
+   console.log(localStorage);  
 }
 
 
-button.addEventListener('click', saveToLocalStorage())
+button.addEventListener('click', () => saveToLocalStorage())
 
 // var fromStorage = JSON.parse(localStorage.getItem("details"));
 
