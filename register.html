@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>koldfyre</title>
 </head>
+
 <body>
 
     <div id="register">
@@ -28,18 +30,51 @@
                     <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
                 </div>
                 <div class="radio-b">
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="male" name="gender">
                     <label for="male"> Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
+                    <input type="radio" id="female" name="gender">
                     <label for="female"> Female</label>
                 </div>
-                
-                <input type="submit" value="register" class="button" id="button">
+
+                <input type="submit" value="register" class="button">
                 <p>I know the gist already! <a href="login.html"> Login </a></p>
             </form>
         </div>
     </div>
-    
+
     <script src="main.js"></script>
+    <script>
+        form.addEventListener('submit', function (evnt) {
+            evnt.preventDefault();
+            if (firstName.value.length < 3) {
+                alert("Names must contain aleast 3 characters");
+                firstName.focus();
+                firstName.style.border = "solid red";
+                return false;
+            }
+            else if (lastName.value.length < 3) {
+                alert("Names must contain aleast 3 characters");
+                lastName.focus();
+                lastName.style.border = "solid red";
+                return false;
+            }
+
+            if (password.value != confirmPassword.value) {
+                alert("Password does not match");
+                return false;
+            }
+
+            if (female.checked == false && male.checked == false) {
+                alert("please choose a gender");
+                return false;
+            }
+
+            saveToLocalStorage();
+
+            window.location = 'login.html'
+        })
+
+    </script>
 </body>
+
 </html>

@@ -14,12 +14,16 @@ h1{
 span{
     color: rgb(157, 213, 223);
 }
+#username{
+    color: rgb(223, 231, 105);
+}
 #theForm a{
     color: white;
 }
 #theForm a:hover{
     color: rgb(196, 71, 196);
 }
+
 /* FIRST PAGE */
 .title{
     color: white;
@@ -130,4 +134,21 @@ button:hover{
     #login{
         padding-top: 2.5em!important;
     }
+}
+
+/* HOME PAGE */
+.wel-h{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.wel-h h1{
+    margin: 0!important;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+@media (min-width: 728px){
+
 }

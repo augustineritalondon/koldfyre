@@ -8,10 +8,22 @@
 </head>
 <body>
 
-    <div>
-        <h1>Rita London says Welcome!</h1>
+    <div class="wel-h">
+        <h1 class="title"> Welcome, <span id="username" style="text-transform: capitalize"></span> </h1>
     </div>
     
     <script src="main.js"></script>
+    <script>
+        (() => {
+            var userName = document.getElementById("username");
+
+            localStorageData = JSON.parse(localStorage.getItem("details"));
+
+            let gender = localStorageData.lGender == "male" ? "Mr" : "Miss";
+            let userFirstName = localStorageData.lFirstName;
+
+            userName.innerHTML = gender + " " + userFirstName; 
+        })()
+    </script>
 </body>
 </html>
